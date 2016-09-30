@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Banking.Models;
 
 namespace Banking
 {
@@ -9,6 +7,15 @@ namespace Banking
     {
         public static void Main(string[] args)
         {
+            BankAccount account = new BankAccount("123-4567890-02");
+            Console.WriteLine($"Balans: {account.Balance}");
+            account.Deposit(200);
+            Console.WriteLine($"Balans: {account.Balance}");
+            account.Withdraw(100);
+            Console.WriteLine($"Balans: {account.Balance}");
+            Console.ReadKey();
+
+
         }
     }
 }
